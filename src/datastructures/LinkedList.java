@@ -1,4 +1,5 @@
 package datastructures;
+
 public class LinkedList {
 
     private int length;
@@ -24,8 +25,7 @@ public class LinkedList {
     }
 
     Node removeLast() {
-        if (length == 0)
-            return null;
+        if (length == 0) return null;
         Node temp = head;
         Node pre = head;
         while (temp.next != null) {
@@ -43,8 +43,7 @@ public class LinkedList {
     }
 
     Node removeFirst() {
-        if (length == 0)
-            return null;
+        if (length == 0) return null;
         Node temp = head;
         head = head.next;
         temp.next = null;
@@ -57,8 +56,7 @@ public class LinkedList {
     }
 
     public void reverse() {
-        if (length == 0)
-            return;
+        if (length == 0) return;
         Node temp = head;
         head = tail;
         tail = temp;
@@ -86,8 +84,7 @@ public class LinkedList {
     }
 
     Node get(int index) {
-        if (index < 0 || index >= length)
-            return null;
+        if (index < 0 || index >= length) return null;
         else {
             Node temp = head;
             for (int i = 0; i < index; i++) {
@@ -98,8 +95,7 @@ public class LinkedList {
     }
 
     public boolean set(int index, int value) {
-        if (index < 0 || index >= length)
-            return false;
+        if (index < 0 || index >= length) return false;
         else {
             Node temp = head;
             for (int i = 0; i < index; i++) {
@@ -111,8 +107,7 @@ public class LinkedList {
     }
 
     public boolean insert(int index, int value) {
-        if (index < 0 || index > length)
-            return false;
+        if (index < 0 || index > length) return false;
         if (index == 0) {
             prepend(value);
             return true;
@@ -150,7 +145,7 @@ public class LinkedList {
         System.out.println(length);
     }
 
-    static class Node {
+    class Node {
         int value;
         Node next = null;
 

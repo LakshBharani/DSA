@@ -3,16 +3,18 @@ package datastructures;
 public class Main {
     public static void main(String[] args) {
 
-        DoublyLinkedList myDLL = new DoublyLinkedList(7);
-        myDLL.getTail();
+        HashTable myHashTable = new HashTable();
+        myHashTable.set("nails", 100);
+        myHashTable.set("tile", 50);
+        myHashTable.set("lumber", 80);
 
-        myDLL.append(10);
-        myDLL.append(15);
-        myDLL.append(25);
-        myDLL.printList();
-        myDLL.removeLast();
-        myDLL.getHead();
-        myDLL.getTail();
-        myDLL.getLength();
+        myHashTable.set("bolts", 200);
+        myHashTable.set("screws", 140);
+        myHashTable.set("hammer", 120);
+
+        myHashTable.printTable();
+
+        System.out.println(myHashTable.get("bolts"));
+        System.out.println(myHashTable.get("tile"));
     }
 }
